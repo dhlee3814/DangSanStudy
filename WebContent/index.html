@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{width: 1200px; margin:0 auto; border:solid green; border-width:2px 20px 40px 20px;}
+        ul{text-align:right; margin-right:10px;}
+        ul li{display: inline;}
+        button{width:100px; border-radius:5px; background-color:rgb(23, 36, 11); cursor:pointer;}
+        form{width:100px; float:right; margin-left:4px;}
+        #header{border: 2px solid green;}
+        #wrapper{text-align:center; border: 2px solid green;padding-bottom:20px;}
+        #footer{text-align:center; border: 2px solid green; padding:10px 0;}
+        .bodyButton{width:150px; height:100px; color:cornsilk; box-shadow:2px 2px 2px 2px gray;}
+        .buttonDiv{margin-top:20px;}
+        .image{margin-top:40px;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li><button onclick="goHome();">홈</button></li>
+            <li><button onclick="goAboutme();">자기소개</button></li>
+            <li><button onclick="goPhoto();">내사진</button></li>
+           	<li><form method="GET" action="/aboutme/today"><button type="submit">몇시에요</button></form></li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div>
+            <h2>웹프론트 개발자~! crong</h2>
+            <span>웹프론트 개발자~! crong 웹프론트 개발자~! crong 웹프론트 개발자~! crong<br>
+                웹프론트 개발자~! crong 웹프론트 개발자~! crong 웹프론트 개발자~! crong</span>
+        </div>
+        <div class="buttonDiv">
+            <button class="bodyButton" onclick="goAboutme();">자기소개</button>
+            <button class="bodyButton" onclick="goPhoto();">내사진</button>
+        </div>
+        <img class="image" src="/aboutme/img/capture.jpg" alt="">
+    </div>
+    <div  id="footer">
+        <span>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+    </div>
+<script type="text/javascript">
+    function goHome(){
+        location.href="index.html";
+    }
+    function goAboutme(){
+        location.href="aboutme.html";
+    }
+    function goPhoto(){
+        location.href="photo.html";
+    }
+</script>
+</body>
+</html>

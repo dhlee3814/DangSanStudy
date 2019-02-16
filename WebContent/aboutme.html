@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    body{width: 1200px; margin:0 auto; border:solid green; border-width:2px 20px 40px 20px;}
+    ul{text-align:right; margin-right:10px;}
+    ul li{display: inline;}
+    button{width:100px; border-radius:5px; background-color:rgb(23, 36, 11); cursor:pointer;}
+    span{margin-bottom:100px;}
+    form{width:100px; float:right; margin-left:4px;}
+    #header{border: 2px solid green;}
+    #wrapper{border: 2px solid green;padding-bottom:20px; padding:0 150px 34px 150px;}
+    #footer{text-align:center; border: 2px solid green; padding:10px 0;}
+    .content{margin-top:32px;}
+    .label{font-size:20px;font-weight:900;}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+    <ul>
+        <li><button onclick="goHome();">홈</button></li>
+        <li><button onclick="goAboutme();">자기소개</button></li>
+        <li><button onclick="goPhoto();">내사진</button></li>
+        <li><form method="GET" action="/aboutme/today"><button type="submit">몇시에요</button></form></li>
+    </ul>
+    </div>
+
+    <!-- Content --> 
+    <div id="wrapper">
+    <div class="content">
+        <span class="label">이런것을 잘해요?</span><br>
+        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+    </div>
+    <div class="content">
+        <span class="label">나의 포트폴리오</span><br>
+        <a href="#">www.#.com</a><br>
+        <span>제 홈페이지입니다. 이곳에서 많은 개발코드를 볼 수 있습니다.</span><br>
+        <a href="#">www.##.com</a><br>
+        <span>제가 주로 개발하는 소스코드입니다. 이곳에서 많은 부분을 확인할 수 있습니다.</span>
+    </div>
+    <div class="content">
+        <span class="label">나의 최근 프로젝트 설명</span><br>
+        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+    </div> 
+</div>
+
+<!-- Footer -->
+<div  id="footer">
+    <span>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</div>
+
+<script type="text/javascript">
+    function goHome(){
+        location.href="index.html";
+    }
+    function goAboutme(){
+        location.href="aboutme.html";
+    }
+    function goPhoto(){
+        location.href="photo.html";
+    }
+</script>
+</body>
+</html>
