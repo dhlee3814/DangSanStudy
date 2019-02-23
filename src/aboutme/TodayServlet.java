@@ -3,6 +3,7 @@ package aboutme;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import javax.servlet.ServletException;
@@ -20,12 +21,9 @@ public class TodayServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		LocalDate nowDate = LocalDate.now();
-		
-		LocalTime nowTime = LocalTime.now();
-		int hour = nowTime.getHour();
-		int minute = nowTime.getMinute();
-		
+		LocalDateTime nowDateTime = LocalDateTime.now();
+		System.out.println(nowDateTime);
+		 
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.print("<HTML><HEAD><TITLE>today</TITLE>");
@@ -33,6 +31,6 @@ public class TodayServlet extends HttpServlet {
 		out.print("</HEAD><BODY>");
 		out.print("<a href='index.html'>메인화면</a>");
 		out.print("<h1>현재시간 : " + nowDate + " "+ hour + ":" + minute +"</h1>");
-		out.print("</BODY></HTML>");
+		out.print("</BODY></HTML>"); 
 	}
 }
